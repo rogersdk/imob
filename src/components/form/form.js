@@ -143,7 +143,7 @@ export default class Form extends Component {
                     <InputCustom id="value" type="number" name="value" value={this.state.value} label="Value R$" onChange={this.onChangeValue} />
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
-                        <button type="submit" className="btn btn-primary">Sign in</button>
+                        <button type="submit" className="btn btn-primary">Submit Values</button>
                         </div>
                     </div>
                 </form>

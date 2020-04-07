@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import { withRouter } from 'react-router';
+
 import logo from "./logo.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootswatch/dist/yeti/bootstrap.min.css";
 import "./App.css";
 
+import Constants from "./common/constants";
+
 import Form from "./components/form/form";
 import Dashboard from "./components/dashboard/dashboard";
+
 
 class App extends Component {
 
@@ -20,18 +25,17 @@ class App extends Component {
         }
 
         this.onSelectChange = this.onSelectChange.bind(this);
-        this.onClickLoot = this.onClickLoot.bind(this);
+        this.onClick = this.onClick.bind(this);
     }
 
     onSelectChange(e) {
         e.preventDefault();
     }
 
-    onClickLoot(e) {
+    onClick(e) {
         e.preventDefault();
-        console.log('onClickLoot',e);
         
-        this.props.history.push('/loot');
+        Constants.data = [];
     }
 
 
@@ -40,6 +44,7 @@ class App extends Component {
         <div>
             <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Imob</a>
+                <button  onClick={this.onClick} className="btn btn-primary">Reset Data</button>
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
                             <a className="nav-link" href="#">XPTO Admin</a>
