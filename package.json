@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://imob/",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.3.1",
     "pubsub-js": "^1.7.0",
